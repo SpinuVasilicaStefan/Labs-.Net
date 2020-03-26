@@ -169,19 +169,5 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HostWCF\HostWCF.csproj">
-      <Project>{bcbb5133-2865-48c7-9b3c-75e01f4c724b}</Project>
-      <Name>HostWCF</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ObjectWCF\ObjectWCF.csproj">
-      <Project>{782a2b53-6dd6-402a-920f-cd1dfd3df433}</Project>
-      <Name>ObjectWCF</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PostComment\PostComment.csproj">
-      <Project>{fad803b5-643b-42d5-bc8d-af521cd7ce5a}</Project>
-      <Name>PostComment</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
