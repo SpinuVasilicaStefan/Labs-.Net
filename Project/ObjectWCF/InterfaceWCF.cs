@@ -35,7 +35,7 @@ namespace ObjectWCF
     }
 
     [ServiceContract]
-    interface IPostComment : InterfaceFunctions
+    interface IFunctions : InterfaceFunctions
     {
     }
 
