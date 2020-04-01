@@ -11,7 +11,9 @@ namespace Proiect
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+
+    [DataContract(IsReference = true)]
     public partial class Photo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,17 +22,24 @@ namespace Proiect
             this.Dynamic = new HashSet<Dynamic>();
             this.Person = new HashSet<Person>();
         }
-    
+        [DataMember]
         public int Id { get; set; }
+        [DataMember]
         public string Name { get; set; }
+        [DataMember]
         public string Path { get; set; }
+        [DataMember]
         public string Location { get; set; }
+        [DataMember]
         public string Event { get; set; }
+        [DataMember]
         public string Scenery { get; set; }
+        [DataMember]
         public string Status { get; set; }
-    
+        [DataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Dynamic> Dynamic { get; set; }
+        [DataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Person> Person { get; set; }
     }

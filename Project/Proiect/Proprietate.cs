@@ -11,7 +11,9 @@ namespace Proiect
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+
+    [DataContract(IsReference = true)]
     public partial class Proprietate
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,10 +21,11 @@ namespace Proiect
         {
             this.Dynamic = new HashSet<Dynamic>();
         }
-    
+        [DataMember]
         public int Id { get; set; }
+        [DataMember]
         public string Name { get; set; }
-    
+        [DataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Dynamic> Dynamic { get; set; }
     }

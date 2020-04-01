@@ -11,12 +11,18 @@ namespace Proiect
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+
+    [DataContract(IsReference = true)]
     public partial class Dynamic
     {
+        [DataMember]
         public int Id { get; set; }
+        [DataMember]
         public string Data { get; set; }
+        [DataMember]
         public int PhotoId { get; set; }
+        [DataMember]
         public int PropertiesId { get; set; }
     
         public virtual Photo Photo { get; set; }
